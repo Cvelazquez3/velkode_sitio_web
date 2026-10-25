@@ -127,15 +127,15 @@ export default function VisionCodeSplit() {
               <div className="grid grid-cols-3 gap-2 pt-1 text-center">
                 <div className="p-2 rounded-lg bg-[#182028]/80 border border-[#25333D]">
                   <div className="text-[10px] text-[#7892A9]">Entornos</div>
-                  <div className="text-xs font-semibold text-white mt-0.5">Web y Desktop</div>
+                  <div className="text-[11px] sm:text-xs font-semibold text-white mt-0.5">Web y Local</div>
                 </div>
                 <div className="p-2 rounded-lg bg-[#182028]/80 border border-[#25333D]">
                   <div className="text-[10px] text-[#7892A9]">Seguridad</div>
-                  <div className="text-xs font-semibold text-white mt-0.5">Respaldos</div>
+                  <div className="text-[11px] sm:text-xs font-semibold text-white mt-0.5">Respaldos</div>
                 </div>
                 <div className="p-2 rounded-lg bg-[#182028]/80 border border-[#25333D]">
                   <div className="text-[10px] text-[#7892A9]">Evolución</div>
-                  <div className="text-xs font-semibold text-[#DBECFE] mt-0.5">Modular</div>
+                  <div className="text-[11px] sm:text-xs font-semibold text-[#DBECFE] mt-0.5">Modular</div>
                 </div>
               </div>
             </div>
