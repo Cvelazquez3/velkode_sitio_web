@@ -21,6 +21,11 @@ export default function Navbar() {
     if (href.startsWith("#")) {
       e.preventDefault();
       setMobileOpen(false);
+      if (href === "#" || href === "#top" || href === "") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        window.history.pushState(null, "", window.location.pathname);
+        return;
+      }
       const target = document.querySelector(href);
       if (target) {
         target.scrollIntoView({ behavior: "smooth" });
@@ -42,7 +47,8 @@ export default function Navbar() {
         <a
           href="#"
           onClick={(e) => handleNavClick(e, "#")}
-          className="focus:outline-none flex items-center"
+          className="focus:outline-none flex items-center cursor-pointer transition-opacity hover:opacity-85"
+          aria-label="Ir al inicio"
         >
           <Logo showIcon={false} />
         </a>
