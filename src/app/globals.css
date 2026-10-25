@@ -1,26 +1,189 @@
 @import "tailwindcss";
 
+/* ==========================================================================
+   VELKODE // DESIGN SYSTEM & ELEGANT SOPHISTICATED TYPOGRAPHY
+   Display Typeface: Outfit (Geometric Precision, Executive Quiet Luxury)
+   Body Typeface: Geist (High-Precision Tech Minimalism)
+   ========================================================================== */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* ==========================================================================
+     VELKODE OFFICIAL PALETTE (17 SWATCHES — STRICT IDENTITY)
+     ========================================================================== */
+  --vk-01-obsidian: #010508;
+  --vk-02-midnight: #06090E;
+  --vk-03-deep-petrol: #081319;
+  --vk-04-petrol-slate-dark: #182028;
+  --vk-05-petrol-slate-medium: #25333D;
+  --vk-06-nordic-oceanic: #2B4C60;
+  --vk-07-muted-steel-cyan: #40626B;
+  --vk-08-cyan-mist: #4B7784;
+  --vk-09-cyan-fog: #557B8E;
+  --vk-10-frost-glow: #6B8C9D;
+  --vk-11-beam-glow: #DBECFE;
+  --vk-12-rail-cyan: #BAD1E3;
+  --vk-13-icy-crystal: #A3BDCC;
+  --vk-14-polar-steel: #7892A9;
+  --vk-15-notch-gray: #71716F;
+  --vk-16-titanium-silver: #CBD5E1;
+  --vk-17-white: #FFFFFF;
+
+  /* Las 6 Principales */
+  --vk-base: #010508;
+  --vk-superficie: #182028;
+  --vk-bruma: #2B4C60;
+  --vk-resplandor: #6B8C9D;
+  --vk-haz: #DBECFE;
+  --vk-luz: #FFFFFF;
+
+  --bg-space: #010508;
+  --bg-surface: #182028;
+  --bg-glass: rgba(8, 19, 25, 0.75);
+
+  --text-primary: #FFFFFF;
+  --text-secondary: #CBD5E1;
+  --text-tertiary: #7892A9;
+  --text-muted: #6B8C9D;
+
+  --border-hairline: rgba(75, 119, 132, 0.22);
+  --border-hover: rgba(107, 140, 157, 0.45);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-vk-obsidian: #010508;
+  --color-vk-midnight: #06090E;
+  --color-vk-petrol-900: #081319;
+  --color-vk-petrol-800: #182028;
+  --color-vk-petrol-700: #25333D;
+  --color-vk-oceanic-600: #2B4C60;
+  --color-vk-oceanic-500: #40626B;
+  --color-vk-cyan-400: #4B7784;
+  --color-vk-cyan-300: #557B8E;
+  --color-vk-frost-200: #6B8C9D;
+  --color-vk-frost-100: #718CA1;
+  --color-vk-beam-glow: #DBECFE;
+  --color-vk-secondary-rail: #BAD1E3;
+  --color-vk-icy-crystal: #A3BDCC;
+  --color-vk-polar-steel: #7892A9;
+  --color-vk-notch-gray: #71716F;
+  --color-vk-titanium-silver: #CBD5E1;
+  --color-vk-white: #FFFFFF;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-space: #010508;
+  --color-surface: #182028;
+
+  --font-sans: 'Geist', -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
+  --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', ui-monospace, monospace;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #010508;
+  color: #CBD5E1;
+  font-family: var(--font-sans);
+  letter-spacing: -0.01em;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Elegant Heading Typography (Outfit) */
+h1, h2, h3, h4, .font-heading, .font-display {
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: -0.025em;
+  font-weight: 600;
+}
+
+/* Apple Pro Titanium Gradient Text */
+.text-titanium {
+  background: linear-gradient(180deg, #FFFFFF 0%, #BAD1E3 50%, #7892A9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-titanium-subtle {
+  background: linear-gradient(180deg, #BAD1E3 0%, #7892A9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Translucent Glass Material with Petrol-Slate Depth */
+.apple-glass {
+  background: rgba(8, 19, 25, 0.72);
+  backdrop-filter: blur(24px) saturate(140%);
+  -webkit-backdrop-filter: blur(24px) saturate(140%);
+  border: 1px solid rgba(75, 119, 132, 0.16);
+  border-top: 1px solid rgba(163, 189, 204, 0.28);
+}
+
+.apple-glass:hover {
+  border-color: rgba(107, 140, 157, 0.35);
+  box-shadow: 0 12px 32px -8px rgba(8, 19, 25, 0.6), 0 0 24px rgba(43, 76, 96, 0.12);
+}
+
+/* Atmospheric Velkode Cinematic Background & Glows */
+.bg-velkode-cinematic {
+  background-color: var(--vk-obsidian);
+  background-image: 
+    radial-gradient(ellipse 65% 55% at 28% 26%, rgba(85, 123, 142, 0.38) 0%, rgba(43, 76, 96, 0.22) 42%, rgba(8, 19, 25, 0.85) 75%, transparent 100%),
+    radial-gradient(ellipse 40% 30% at 65% 5%, rgba(113, 140, 161, 0.14) 0%, transparent 70%);
+}
+
+.glow-cyan-mist {
+  position: absolute;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, rgba(85, 123, 142, 0.28) 0%, rgba(43, 76, 96, 0.14) 45%, transparent 75%);
+  filter: blur(48px);
+}
+
+.apple-glass:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Buttons */
+.apple-btn-primary {
+  background: #FFFFFF;
+  color: #000000;
+  font-family: 'Outfit', var(--font-sans);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  border-radius: 9999px;
+  transition: transform 120ms ease-out, background-color 150ms ease-out, box-shadow 150ms ease-out;
+}
+.apple-btn-primary:hover {
+  box-shadow: 0 0 24px rgba(255, 255, 255, 0.25);
+}
+.apple-btn-primary:active {
+  transform: scale(0.97);
+}
+
+.apple-btn-secondary {
+  background: rgba(255, 255, 255, 0.05);
+  color: #FFFFFF;
+  font-family: 'Outfit', var(--font-sans);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 9999px;
+  transition: transform 120ms ease-out, background-color 150ms ease-out, border-color 150ms ease-out;
+}
+.apple-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+.apple-btn-secondary:active {
+  transform: scale(0.97);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 9999px;
 }

@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Velkode
 
-## Getting Started
+> **Código que impulsa negocios.**
 
-First, run the development server:
+Velkode es una consultora de software que diseña y construye productos digitales modernos, escalables y de alto rendimiento para empresas que quieren crecer con tecnología.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## Stack
+
+| Capa | Tecnología |
+|------|-----------|
+| Framework | [Next.js 16](https://nextjs.org/) (App Router) |
+| Lenguaje | TypeScript |
+| Estilos | [Tailwind CSS v4](https://tailwindcss.com/) |
+| Animaciones | [Framer Motion](https://www.framer.com/motion/) |
+| Íconos | [@tabler/icons-react](https://tabler.io/icons) |
+| Utilidades | [clsx](https://github.com/lukeed/clsx) |
+| Fuentes | Space Grotesk · Inter · JetBrains Mono |
+
+---
+
+## Paleta de colores oficial (Identidad Velkode)
+
+| Tono | Hex | Uso principal |
+|------|-----|---------------|
+| `Obsidian Blue` | `#010508` / `#06090E` | Fondos de alto contraste y base |
+| `Deep Navy` | `#081319` | Fondo general de la plataforma |
+| `Dark Slate` | `#182028` / `#25333D` | Tarjetas, bordes y superficies |
+| `Steel Blue` | `#4B7784` / `#557B8E` | Acentos primarios y detalles |
+| `Ice Blue` | `#DBECFE` / `#BAD1E3` | Textos principales y destacados |
+| `Muted Slate` | `#7892A9` / `#CBD5E1` | Textos secundarios y lectura |
+
+---
+
+## Estructura del proyecto
+
+```
+src/
+├── app/                  # App Router (páginas, layout, estilos globales)
+│   ├── globals.css       # Estilos globales + @theme (Tailwind v4)
+│   ├── layout.tsx        # Root layout con fuentes
+│   └── page.tsx          # Página principal
+├── components/
+│   ├── ui/               # Componentes genéricos reutilizables
+│   ├── sections/         # Secciones de la landing page
+│   └── layout/           # Navbar, Footer
+└── lib/
+    ├── constants.ts      # Constantes de la marca
+    └── utils.ts          # Utilidades (cn, etc.)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Comandos de desarrollo
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# Instalar dependencias
+npm install
 
-## Learn More
+# Iniciar servidor de desarrollo
+npm run dev
 
-To learn more about Next.js, take a look at the following resources:
+# Construir para producción
+npm run build
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Iniciar servidor de producción
+npm run start
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Ejecutar linter
+npm run lint
+```
 
-## Deploy on Vercel
+La aplicación estará disponible en [http://localhost:3000](http://localhost:3000).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Requisitos
+
+- Node.js >= 18.17
+- npm >= 9
+
+---
+
+*© 2025 Velkode. Todos los derechos reservados.*
