@@ -6,6 +6,7 @@
 ## 1. Datos Generales de la Empresa
 
 * **Nombre de Marca:** Velkode
+* **Fundador & Dirección:** Christian Velázquez
 * **Slogan Oficial:** `See it. Build it.`
 * **Tagline de Ingeniería:** `Code with vision.`
 * **Correo Institucional Oficial:** `velkode.contacto@gmail.com`
